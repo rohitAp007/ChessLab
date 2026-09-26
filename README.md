@@ -1,46 +1,60 @@
-# ChessLab — SwiftUI Chess Starter
+# ♟️ ChessLab
 
-Target: iOS 17+ / Swift 5.9+ (works with current Xcode versions).
+> An open-source native iOS chess application built with Swift and SwiftUI.
 
-## Folder structure
+[Features] · [Architecture] · [Contributing] · [Roadmap]
 
-Chess/
-├── ChessApp.swift
-├── Models/
-│   └── ChessModels.swift
-├── Engine/
-│   ├── ChessBoard.swift
-│   ├── MoveValidator.swift
-│   └── ChessGame.swift
-├── Views/
-│   ├── ContentView.swift
-│   ├── ChessBoardView.swift
-│   ├── ChessSquareView.swift
-│   └── GameHeaderView.swift
-└── Tests/
-    └── ChessTests.swift
+## 📱 About
 
-## How to use
+ChessLab is an open-source chess application for iOS,
+built to explore modern native iOS development using
+Swift and SwiftUI.
 
-1. Create an iOS SwiftUI project named `Chess` in Xcode.
-2. Delete the template `Item.swift` if it exists.
-3. Create the `Models`, `Engine`, and `Views` groups.
-4. Add the source files from this package to the Chess app target.
-5. Add `Tests/ChessTests.swift` to the `ChessTests` target.
-6. Build and run.
+The project is also designed to be a learning-friendly
+codebase where developers can contribute new features,
+improvements, tests, and documentation.
 
-The implementation includes:
-- 8x8 chess board
-- All six piece movement types
-- Captures
-- Turn management
-- Check/checkmate
-- Stalemate
-- Castling
-- En passant
-- Pawn promotion
-- Undo
-- Move history
-- Unit tests
+## ✨ Features
 
-This is a local two-player foundation. AI/Stockfish, clocks, persistence, PGN/FEN, and online multiplayer can be added as separate features.
+- [x] Chess board
+- [x] Piece movement
+- [x] Captures
+- [x] Turn management
+- [x] Check detection
+- [x] Checkmate detection
+- [x] Stalemate detection
+- [x] Castling
+- [x] En passant
+- [x] Pawn promotion
+- [x] Undo
+- [x] Move history
+- [ ] Chess clock
+- [ ] Game persistence
+- [ ] FEN support
+- [ ] PGN support
+- [ ] AI opponent
+- [ ] Stockfish integration
+- [ ] Online multiplayer
+
+## 🛠 Tech Stack
+
+- Swift
+- SwiftUI
+- Swift Concurrency
+- SwiftData
+- XCTest
+
+## 🏗 Architecture
+
+```text
+SwiftUI
+   ↓
+Views
+   ↓
+Game State
+   ↓
+Chess Engine
+   ↓
+Move Validator
+   ↓
+Chess Models
